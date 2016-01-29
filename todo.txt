@@ -1,0 +1,16 @@
+According to user prespective:------->
+  1. After hiting the url user should get index page where he can
+     create a new account or login into axisting account by his
+     credentials.
+  2. After login he should get his profile page where he will be 
+     able to see post, able to do any post, follow the people by
+     searching.
+  3. He should be able to logout.
+
+According to developer perspective:--------->
+  1. Create a database where we will be able to store all information
+     about every users.
+  2. Create a HTTP server which will handle the all http request and 
+     give response accordingly.
+  3. Create login and homepage.
+  
