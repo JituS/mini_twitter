@@ -1,0 +1,32 @@
+{
+  "name": "mini_twitter",
+  "version": "1.0.0",
+  "description": "miniTwitter is the web based application in which people can log in after creating account in that.  people can share any post, follow another people.",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JituS/mini_twitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JituS/mini_twitter/issues"
+  },
+  "homepage": "https://github.com/JituS/mini_twitter#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "pg": "^4.4.4",
+    "querystring": "^0.2.0"
+  }
+}
