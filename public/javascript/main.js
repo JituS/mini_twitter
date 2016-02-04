@@ -1,6 +1,6 @@
 var renderAllMsg = function(data){
 	var a = data.map(function(each){
-		return '<div class="post">date: '+each.moment.split('T')[0]+'<p class="content">'+each.content+'</p></div>';
+		return '<div class="post">date: '+each.moment.split('T')[0]+'<pre>  </pre>'+each.name+'<p class="content">'+each.content+'</p></div>';
 	});
 	$('#allPost').html(a.join(''));
 };
@@ -15,7 +15,8 @@ var renderAllUsers = function(data){
 var allPost = function(){
 	$.get('currentUserInfo', function(data, status){
 		if(status == 'success'){
-			renderAllMsg(data);
+			console.log(data);
+			renderAllMsg(JSON.parse(data));
 		}
 	});
 };
@@ -31,7 +32,6 @@ var post = function(content){
 var fillUsers = function(){
 	$.get('users', function(data, status){
 		if(status == 'success'){
-			console.log(data);
 			renderAllUsers(data);
 		}
 	});
