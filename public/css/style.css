@@ -1,0 +1,40 @@
+
+.header{
+	display: inline-block;
+	background: green;
+	width: 70%;
+	margin-left: 13%;
+
+}
+
+.content{
+	font-family: sans-serif;
+	margin-left: 70px;
+	font-size: 20px;
+}
+
+button ,input{
+	width: 100px;
+	height: 23px;
+}
+
+.center{
+	text-align: left;
+	margin-left: 15%;
+	width: 70%;
+	height: 70%;
+	background: yellow;
+}
+
+.post{
+	width: 800px;
+	margin-top: 5px;
+	background: pink;
+	margin-left: 400px;
+	text-align: left;
+}
+
+.searching{
+	margin-top: 10px;
+	margin-left: 25%;
+}

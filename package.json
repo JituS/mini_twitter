@@ -19,14 +19,18 @@
   "homepage": "https://github.com/JituS/mini_twitter#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3"
   },
   "dependencies": {
     "body-parser": "^1.14.2",
     "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
     "jade": "^1.11.0",
+    "lodash": "^4.2.0",
+    "moment": "^2.11.1",
     "pg": "^4.4.4",
-    "querystring": "^0.2.0"
+    "querystring": "^0.2.0",
+    "supertest": "^1.1.0"
   }
 }

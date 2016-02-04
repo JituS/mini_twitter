@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to mini Twitter</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../javascript/jquery.js"></script>
+    <script type="text/javascript" src="../javascript/main.js"></script>
+  </head>
+    <body>
+    <div class="container">
+        <div class="header">
+          <p id='logout'>logout</p>
+          <input type="text" name="srch" list="datalist1">
+          <datalist id="datalist1"></datalist>
+          <button id='search'>search</button>
+        </div>
+        <div class="searching">
+          <textarea placeholder="what's in your mind" name="post" cols="100" rows="5"></textarea>
+          <button id='post'>post</button>
+          <br>
+        </div>
+          <div id="allPost"></div>
+          <div id='searchResult'></div>
+    </div>
+    </body>
+</html>

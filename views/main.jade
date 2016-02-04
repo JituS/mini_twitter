@@ -2,5 +2,9 @@ doctype html
 html(lang='en')
  head
   title Welcome to mini Twitter
+  link(rel='stylesheet', href='../css/style.css')
   body
-   h1= name
+   .header
+     h1 Welcome to twitter
+    -for(var y=0;y<post.length;y++)
+      h1= post[y]
