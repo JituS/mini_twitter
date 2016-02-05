@@ -1,0 +1,66 @@
+
+.header {
+	display: inline-block;
+	width: 70%;
+	margin: 30px 0 0 500px;
+}
+
+.header #logout {
+	margin: 0 0px 0px 70%;
+	font-family: serif;
+	font-weight: 24px;
+}
+
+#followerList {
+	margin:  0 100px 0 0;
+	font-family: serif;
+	font-weight: 24px;
+}
+
+.content {
+	font-family: sans-serif;
+	margin-left: 70px;
+	font-size: 20px;
+	height: 200px;
+}
+
+button,input {
+	width: 100px;
+	height: 30px;
+}
+
+input {
+	width: 200px;
+}
+
+.searching,  #allPost {
+	margin: 10px 0 0 500px;
+}
+
+textarea, #allPost {
+	height: 100px;
+	width: 600px;
+	font-size: 16px;	
+}
+
+.center {	
+	text-align: left;
+	margin-left: 15%;
+	width: 70%;
+	height: 70%;
+	background: yellow;
+}
+
+.post {
+	padding: 20px 10px 0 10px;
+	background: rgb(204, 255, 204);
+	text-align: justify;
+}
+
+#name {
+	font-size: 20px;
+}
+ 
+p {
+	text-align: justify;
+}
