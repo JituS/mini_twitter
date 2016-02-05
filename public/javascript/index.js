@@ -1,22 +1,20 @@
 var loginReq = function(name, password){
 	if(name && password){
 		$.post('login', 'name='+name+'&password='+password, function(data, status){
-				console.log(data)
+			console.log(data);
 			if(status == 'success' && data.link){
 				window.location.href = data.link;
 			}
-		})
-	}else{
+		});
+	}else
 		alert('enter correct username and password');
-	}
 };
 
 var signupReq = function(name, email, dob, password){
 	$.post('signup', 'name='+name+'&email='+email+'&dob='+dob+'&password='+password, function(data, status){
-		if(status == 'success'){
+		if(status == 'success')
 			alert(data);
-		}
-	})
+	});
 };
 
 $(document).ready(function(){

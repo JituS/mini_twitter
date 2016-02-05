@@ -1,6 +1,7 @@
 var renderAllMsg = function(data){
 	var a = data.map(function(each){
-		return '<div class="post">date: '+each.moment.split('T')[0]+'<pre>  </pre>'+each.name+'<p class="content">'+each.content+'</p></div>';
+		return '<div class="post"><div id="date">date: '+each.moment.split('T')[0]+'</div><div id="name">'+
+		each.name+'</div><p class="content">'+each.content+'</p></div>';
 	});
 	$('#allPost').html(a.join(''));
 };
@@ -15,7 +16,6 @@ var renderAllUsers = function(data){
 var allPost = function(){
 	$.get('currentUserInfo', function(data, status){
 		if(status == 'success'){
-			console.log(data);
 			renderAllMsg(JSON.parse(data));
 		}
 	});
@@ -31,9 +31,8 @@ var post = function(content){
 
 var fillUsers = function(){
 	$.get('users', function(data, status){
-		if(status == 'success'){
+		if(status == 'success')
 			renderAllUsers(data);
-		}
 	});
 };
 
@@ -52,15 +51,13 @@ var renderSearchResult = function(data){
 var search = function(){
 	var name = $('input[name=srch]').val();
 	$.post('userSearch', 'name='+name, function(data, status){
-		if(status == 'success'){
+		if(status == 'success')
 			$('#searchResult').html(renderSearchResult(data));
-		}
 	});
 };
 
 var logout = function(){
 	$.post('logout', function(data,status){
-		console.log(data, status);
 		// if(status == 'success'){
 			window.location.href = data.link;
 		// }

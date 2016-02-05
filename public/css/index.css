@@ -1,0 +1,29 @@
+#title {
+	font-weight: normal;
+	font-size: 40px;
+	font-family: serif;
+	text-align: center;
+}
+
+
+.loginSession {
+	position: absolute;
+	text-align: center;
+	font-size: 18px;	
+	font-family: monospace;
+	margin: 40px 0 0 550px;
+	/*background: lightgrey;*/
+    /*border-radius: 30px;*/
+}
+
+.signupSession {
+	width:30%;
+	height: 100px;
+	position: absolute;
+	text-align: center;
+	font-size: 24px;	
+	font-family: monospace;
+	margin: 200px 0 0 550px;
+	/*background: lightgrey;*/
+    /*border-radius: 30px;*/
+}
