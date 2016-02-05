@@ -1,6 +1,6 @@
 var renderAllMsg = function(data){
 	var a = data.map(function(each){
-		return '<div class="post">date: '+each.moment.split('T')[0]+'<pre>  </pre>'+each.name+'<p class="content">'+each.content+'</p></div>';
+		return '<div class="post">date: '+each.moment.split('T')[0]+'<pre>  </pre>'+each.name+'<p class="content">'+each.content+'</p> <button class="like" id='+each.postId+'></button></div>';
 	});
 	$('#allPost').html(a.join(''));
 };
@@ -75,4 +75,5 @@ $(document).ready(function(){
 	fillUsers();
 	$('#search').on('click', search);
 	$('#logout').on('click', logout);
+
 });	
