@@ -22,12 +22,16 @@ button ,input{
 	text-align: left;
 	margin-left: 15%;
 	width: 70%;
-	height: 70%;
+	height: 30%;
 	background: yellow;
 }
 
+#allPost{
+	height: 100px;
+}
+
 .post{
-	width: 800px;
+	width: 100px;
 	margin-top: 5px;
 	background: pink;
 	margin-left: 400px;

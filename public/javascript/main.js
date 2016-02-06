@@ -8,12 +8,14 @@ var renderAllMsg = function(data){
 	console.log(data)
 	var a = data.map(function(each){
 		return '<div class="post"><div id="date">date: '+each.moment.split('T')[0]+'</div><div id="name">'+
-		each.name+'</div><p class="content">'+each.content+'</p><button value='+each.postid+' onclick=like(this.getAttribute("value"))>like</button></div>';
+		each.name+'</div><div id="content"><p>'+each.content+'</p></div><div class="like"><img src="./saaa.gif"value='+each.postid+' onclick=like(this.getAttribute("value"))></img>'+each.likes+'</div></div>';
 	});
 	$('#allPost').html(a.join(''));
 };
 
 var renderAllUsers = function(data){	
+	console.log(data)
+	$('#name').html(data.name);
 	var a = data.map(function(each){
 		return '<option>'+each.username+'</option>'
 	});
@@ -65,9 +67,7 @@ var search = function(){
 
 var logout = function(){
 	$.post('logout', function(data,status){
-		// if(status == 'success'){
-			window.location.href = data.link;
-		// }
+		window.location.href = data.link;
 	});
 };
 
@@ -79,5 +79,7 @@ $(document).ready(function(){
 	fillUsers();
 	$('#search').on('click', search);
 	$('#logout').on('click', logout);
-
+	$.get('name', function(data, status){
+		$('.name').html(data);
+	})
 });	
