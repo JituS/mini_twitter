@@ -6,9 +6,24 @@
 }
 
 .like{
-	margin-top: 6%;
 	margin-left: 50%;
 	position: absolute;
+	display: inline-flex;
+}
+
+.name{
+	text-align: center;
+	font-size: 20px;
+	padding: .8%;
+}
+
+#like{
+	float: right;
+}
+
+#likers{
+	float: right;
+	margin-left: 9px;
 }
 
 body{
@@ -40,17 +55,34 @@ a{
 	margin: 2%;
 }
 
+#likers{
+	float: left;
+	width: 20%;
+	background-color: #efefef;
+	margin: 1px;
+}
+
+td,tr{
+    padding: 1px;
+	table-layout: auto;
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+
+}
+
 #allPost{
 	height: 100%;
+	margin-top: 100px;
 }
 
 .container{
 	width: 60%;
 	text-align: center;
-	height: 99%;
 	margin-left: 20%;
 	overflow: scroll;
 	background: #efefef;
+	height: 99%;
 	position: absolute;
 }
 
@@ -96,7 +128,7 @@ input {
 	width: 60%;
 	height: 20%;
 	overflow: scroll;
-	
+
 	/*position: absolute;*/
 }
 

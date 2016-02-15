@@ -10,8 +10,8 @@ var loginReq = function(name, password){
 		alert('enter correct username and password');
 };
 
-var signupReq = function(name, email, dob, password){
-	$.post('signup', 'name='+name+'&email='+email+'&dob='+dob+'&password='+password, function(data, status){
+var signupReq = function(name, email, password){
+	$.post('signup', 'name='+name+'&email='+email+'&password='+password, function(data, status){
 		if(status == 'success')
 			alert(data);
 	});
@@ -24,8 +24,7 @@ $(document).ready(function(){
 	$('#signup').on('click',function(){
 		var name = $('input[name=sname]').val();
 		var email = $('input[name=email]').val();
-		var dob = $('input[name=dob]').val();
 		var password = $('input[name=spassword]').val();
-		signupReq(name, email, dob, password);
+		signupReq(name, email, password);
 	});		
 });	
