@@ -23,7 +23,7 @@ var likers = function(value){
 };
 
 var renderDetails = function(data){
-	var template = '<a href="#" id="close">close</a><ul>_DATA_</ul>';
+	var template = '<a href="#" id="close">close</a><ul><h2>Information of this user</h2>_DATA_</ul>';
 	var list = "";
 	for(var i in data){
 		if(i == "dob") data[i] = data[i].split("T")[0];
@@ -73,6 +73,7 @@ var allPost = function(){
 var post = function(content){
 	$.post('newPost','content='+content, function(data, status){
 		if(status == 'success'){
+			$('textarea[name=post]').val('');
 			allPost();
 		};
 	});	
@@ -94,9 +95,9 @@ var follow = function(id){
 };
 
 var renderSearchResult = function(data){
-	var template = '<a href="#" id="close">close</a><table class="userSrch">_TR_</table>';
+	var template = '<a href="#" id="close">close</a><table class="userSrch"><h1>Click on name for follow any of them</h1>_TR_</table>';
 	var tableData = data.map(function(each){
-		return '<tr><td value='+each.id+' onclick=follow(this.getAttribute("value"))>'+each.username+'</td><td>'+each.email+'</td></tr>'
+		return '<a href=#><tr><td value='+each.id+' onclick=follow(this.getAttribute("value"))>'+each.username+'</td><td>'+each.email+'</td></tr></a>'
 	});
 	return template.replace('_TR_', tableData.join(''));
 };
