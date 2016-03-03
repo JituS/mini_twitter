@@ -7,20 +7,46 @@
 	<script type="text/javascript" src="javascript/index.js"></script>
 </head>
 <body>
-	<div id="title">
+	<div class="title">
 		Twitter
 	</div>
-	<div class="loginSession">
-		Email : <input type="text" name="lname"><br><br>
-		Password: <input type="password" name="lpassword"><br><br>
-		<button id='login'>log in</button>
-	</div>
-	<div class="signupSession">
-		Name : <input type="text" name="sname"><br><br>
-		Email : <input type="email" name="email"><br><br>
-		Password : <input type="password" name="spassword"><br><br>
-		DOB : <input type="date" name="sdob"><br><br>
-		<button id='signup'>signup</button>
+	<div class="container">
+		<div id="signup-box" class="shadow">
+			<div class="heading">
+				Sign Up Here
+			</div>
+			<table cellpadding="5px" align="center" class="boxes">
+				<tr>
+					<td>Name</td><td><input type="text" name="sname" class="text" required></td>
+				</tr>
+				<tr>
+					<td>Email</td><td><input type="email" name="email" class="text" required></td>
+				</tr>
+				<tr>
+					<td>Password</td><td><input type="password" name="spassword" class="text" required></td>
+				</tr>
+				<tr>
+					<td>DOB</td><td><input type="date" name="sdob" class="text" ></td>
+				</tr>
+				<tr>
+					<td></td><td><button id='signup' class="button">Sign up</button></td>
+				</tr>
+			</table>
+		</div>
+		<div id="signin-box" class="shadow">
+			<div class="heading">
+				Sign In Here
+			</div>
+			<table cellpadding="5px" align="center" class="boxes">
+				<tr>
+					<td>Email </td><td><input type="text" name="lname" class="text"></td>
+				</tr>
+				<tr>
+					<td>Password</td><td><input type="password" name="lpassword" class="text"></td>
+				</tr>
+				<tr><td></td><td><button id='login' class="button">Sign in</button></td></tr>
+			</table>
+		</div>
 	</div>
 </body>
 </html>
