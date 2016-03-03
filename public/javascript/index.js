@@ -1,8 +1,9 @@
 var loginReq = function(name, password){
 	if(name && password){
 		$.post('login', 'name='+name+'&password='+password, function(data, status){
-			console.log(data);
 			if(status == 'success' && data.error){
+				$('input[name=lname]').val('');
+				$('input[name=lpassword]').val('');
 				alert('enter correct username and password');
 			}else{
 				window.location.href = data.link;
@@ -13,8 +14,12 @@ var loginReq = function(name, password){
 
 var signupReq = function(name, email, password, dob){
 	$.post('signup', 'name='+name+'&email='+email+'&password='+password+'&dob='+dob, function(data, status){
-		if(status == 'success')
-			alert(data);
+		if(status == 'success'){
+			$('input[name=sname]').val('')
+			$('input[name=email]').val('')
+			$('input[name=spassword]').val('')
+			$('input[name=sdob]').val('')
+		}
 	});
 };
 
