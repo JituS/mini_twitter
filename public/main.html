@@ -3,33 +3,37 @@
   <head>
     <title>Welcome to mini Twitter</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script type="text/javascript" src="../javascript/jquery.js"></script>
     <script type="text/javascript" src="../javascript/main.js"></script>
   </head>
     <body>
-      <div class='top-header'>
-        <div class="name"></div>
-        <a href="#" id='logout'>Log out</a>
-      </div>
-      <div id="likers">
+      <div class="title">
+          <div class="head">Twitter</div>
+          <div class="name-logout">
+              <div class="name"></div>
+              <div class="log-out"><a href="#" id="logout">Log out</a></div>
+          </div>
       </div>
       <div class="container">
-          <div class="header">
-            <div id="followerList">
-              <input type="text" name="srch" list="datalist1">
-              <datalist id="datalist1"></datalist>
-              <button id='search'>search</button>
-            </div>
+          <div id="likers"></div>
+          <div class="wrapper">
+                <div id="followerList">
+                  <input type="text" name="srch" list="datalist1" class="text  search-button">
+                  <datalist id="datalist1"></datalist>
+                  <button id='search' class="button">search</button>
+                </div>
+              <div class="searching">
+                <textarea placeholder="what's in your mind" name="post" class="text area"></textarea><br/>
+                <button id='post' class="button button-margin">post</button>
+              </div>
+                <div id="allPost"></div>
+                <div id='searchResult'></div>
           </div>
-          <div class="searching">
-            <textarea placeholder="what's in your mind" name="post" cols="100" rows="5"></textarea>
-            <button id='post'>post</button>
+          <div id='top' class="hide">
+              <div class="message"></div>
           </div>
-            <div id="allPost"></div>
-            <div id='searchResult'></div>
-      </div>
-    <div id='top' class="hide">
-    <div class="message">
     </div>
+
     </body>
 </html>

@@ -5,7 +5,7 @@ var like = function(value){
 }
 
 var likersTable = function(data){
-	var template = '<a href="#" id="close">close</a><table><tr><th>Name </th><th>Email </th></tr>_TR_</table>';
+	var template = '<a href="#" id="close"><img src="/images/close.svg"></a><table><tr><th>Name </th><th>Email </th></tr>_TR_</table>';
 	var tableData = data.map(function(user){
 		return '<tr><td>'+user.username+'</td><td>'+user.email+'</td></tr>'
 	});
@@ -23,7 +23,7 @@ var likers = function(value){
 };
 
 var renderDetails = function(data){
-	var template = '<a href="#" id="close">close</a><ul>_DATA_</ul>';
+	var template = "<a href='#' id='close'><img src='/images/close.svg'></a><ul>_DATA_</ul>";
 	var list = "";
 	for(var i in data){
 		if(i == "dob") data[i] = data[i].split("T")[0];
@@ -54,7 +54,7 @@ var renderAllMsg = function(data){
 	$('#allPost').html(a.join(''));
 };
 
-var renderAllUsers = function(data){	
+var renderAllUsers = function(data){
 	$('#name').html(data.name);
 	var users = data.map(function(each){
 		return '<option>'+each.username+'</option>'
@@ -75,7 +75,7 @@ var post = function(content){
 		if(status == 'success'){
 			allPost();
 		};
-	});	
+	});
 };
 
 var fillUsers = function(){
@@ -134,4 +134,4 @@ $(document).ready(function(){
 		$('.name').html('you are logged in as '+data);
 	});
 
-});	
+});
