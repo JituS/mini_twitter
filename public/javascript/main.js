@@ -73,6 +73,7 @@ var allPost = function(){
 var post = function(content){
 	$.post('newPost','content='+content, function(data, status){
 		if(status == 'success'){
+			$('textarea[name=post]').val('');
 			allPost();
 		};
 	});
@@ -94,9 +95,9 @@ var follow = function(id){
 };
 
 var renderSearchResult = function(data){
-	var template = '<a href="#" id="close">close</a><table class="userSrch">_TR_</table>';
+	var template = '<a href="#" id="close">close</a><table class="userSrch"><h3>Click on name for follow any of them</h3>_TR_</table>';
 	var tableData = data.map(function(each){
-		return '<tr><td value='+each.id+' onclick=follow(this.getAttribute("value"))>'+each.username+'</td><td>'+each.email+'</td></tr>'
+		return '<tr><td value='+each.id+' onclick=follow(this.getAttribute("value"))><a href=#>'+each.username+'</a></td><td>'+each.email+'</td></tr>'
 	});
 	return template.replace('_TR_', tableData.join(''));
 };
